@@ -19,14 +19,17 @@ working flow:
    - ```/translate``` will in turn calls an internal api (```/internal/translate```) which acts as third party service
    - i used plain objest {} as in memory storage to store cached results, but something like redis is preferable 
    
-   
+
 ### caching && delivery mechanism
 
    - there are 2 middlewares 
      - one checks the cache and will set the response if cached data found
      - one calls the external  api if cache not found and set the response
      - finally main controller delivers the response to the client.
-
+## extendability 
+ - caching mechanism can updated by changing the middlewares,
+ - different translation services can integrated by changing index translate function in /libs/translation-service
+ 
 ## quick demo
 for the url  http://localhost:3000/translate?text=helloworld&from=english&to=hindi
 
@@ -35,4 +38,3 @@ for the url  http://localhost:3000/translate?text=helloworld&from=english&to=hin
   - sub sequent responses
       <img  src="./images/second_time.png">
 
-    
