@@ -1,6 +1,5 @@
 
-## Translation Caching (codeyoung nodejs intern assessment)
-
+## Translation Caching 
 ## Goal:
 Develop a web server that exposes an API to translate a text.
 
